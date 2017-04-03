@@ -90,11 +90,12 @@
 		/*padding-left: 3em;*/
 	}
 	.centre_img img {
-		width: 70% !important;
+		width: 70%;
 	}
-	.centre {
+	.centre *{
 		margin-top: 1em;
 		text-align: center;
+		margin: 0 auto;
 	}
 	.feature {
 		width: 100%;
@@ -145,10 +146,7 @@
 	.feature:hover h4:after {
 		background-color: #00FF00;
 	}
-	.centre_link {
-		text-align: center;
-	}
-	.article, .article p, .story p {
+	.article, .article p, #about_text p {
 		text-align: left;
 	}
 	.article h4 {
@@ -165,18 +163,6 @@
 		border-top: 0.15em solid #DFDFDF;
 		border-bottom: 0.15em solid #DFDFDF;
 	}	
-	.border_b {
-		border-bottom: 0.15em solid #DFDFDF !important;
-	}
-	.border.article, .vert_text_img.border, .vert_text_img.first, .article.first, .horiz_text_img.border {
-		padding: 1em 10%;
-	}
-	.article.border.first {
-		border: none;
-	}
-	#content.shadow img {
-		margin: 1.5em 0;
-	}
 	.shadow img{
 		-webkit-filter: drop-shadow(0 0.2em 0.4em rgba(0,0,0,.5));
 		-moz-filter: drop-shadow(0 0.2em 0.4em rgba(0,0,0,.5));
@@ -195,7 +181,7 @@
 		text-decoration: none;
 	}
 	a:hover {color: #1e85a7;}
-	/* Remove highlight */
+	/* Remove highlight on touch mobile */
 	img, a, #menu_icon {-webkit-tap-highlight-color: rgba(255, 255, 255, 0);}
 	p {font-size: 1.1em;}
 	b {font-weight:bold;}
@@ -216,7 +202,7 @@
 		line-height: 1.2em;
 		text-align: left;
 	}
-	.about {
+	.no_pic {
 		margin: 0.3em 0;
 		text-align: center;
 		padding: 0.5em;
@@ -226,27 +212,16 @@
 		-webkit-border-radius: 4%;
 		border-radius: 4%;
 	}
-	.set_height.bigger {
-		height: 5em !important;
-		margin-top: -2em;
-	}
-	.set_height {
-		height: 3em !important;
-		padding: 0.5em 0;
-	}
-	.set_height.smaller {
-		height: 2em !important;
-		padding: 1em 0;
-	}
 	.promo-text {
 		height: auto;
 		display: table-cell;
 		vertical-align: middle;
 		line-height: 1.5em;	
+		padding-left: 1em;
 	}
 	.promo-text.wrap {
 		display: block;
-		margin: 0 auto !important;
+		margin: 0 auto;
 	}
 	.promo-text p {
 		padding: 1em 1em 0 1em;
@@ -394,12 +369,12 @@
 /*----------->>> PAGE STRUCTURE <<<-----------*/
 /*--------------------------------------------*/
 	
-	/*------->>> INDEX (YO Home) <<<------*/
+	/*------->>> INDEX <<<------*/
 	/*------------------------------------*/
 		.promo-home {background-color: #FFF;}
 		.promo-home .promo-title {color: #00CC00;}
 		.home {vertical-align: top;}
-		.container.home div {height: auto !important;}
+		.container.home div {height: auto;}
 	/*end index*/
 	
 	/*------------>>> HOME <<<------------*/
@@ -413,12 +388,12 @@
 	
 	/*----------->>> ABOUT <<<------------*/
 	/*------------------------------------*/
-		.story {
+		#about_text {
 			padding: 0 1em;
 			margin: 0 auto;
 			border: none;
 		}
-		.story h4 {
+		#about_text h4 {
 			font-size: 2.5em;
 			font-weight: bold;
 			text-align: center;
@@ -427,6 +402,16 @@
 			padding-bottom: 1em;
 		}
 	/*end about*/
+	
+	/*------->>> SIGN UP <<<------*/
+	/*------------------------------------*/
+		.promo-home.sign_up {background-color: #F1F1F1;}
+		.sign_up .centre_img{
+			width: 50% !important;
+			vertical-align: top;
+		}
+		
+	/*end index*/
 	
 /*end page structure*/
 	
@@ -477,7 +462,7 @@
 			.promo .wrap, .promo-home .wrap {max-width: 90%;}
 			/*----------->>> ABOUT <<<------------*/
 			/*------------------------------------*/
-				.story {width: 90%;}
+				#about_text {width: 90%;}
 			/*end about*/
 			.testimonial {width: 90%;}
 		}
@@ -497,7 +482,7 @@
 			.promo .wrap, .promo-home .wrap {max-width: 90%;}
 			.promo-text p {width: 80%;}
 			.header_buttons {width: 100%;}
-			.centre_img img {width: 100% !important;}
+			.centre_img img {width: 100%;}
 			#menu_title {
 				display: block;
 				font-size: 1.8em;
@@ -548,16 +533,6 @@
 			}
 		/*end home*/
 		
-		/*---------->>> CONTACT <<<-----------*/
-		/*------------------------------------*/
-			.home div {height: 32.5em !important;}
-			#content.border { height: auto !important;}
-			#contact_btn {
-				margin-left: 0;
-				text-align: center;
-				width: 80%;
-			}
-		/*end contacts*/
 	}
 	/*end tablet -> big phones*/
 	
@@ -567,8 +542,7 @@
 			/*----------->>> GLOBAL <<<-----------*/
 			/*------------------------------------*/
 				.promo-title {margin-bottom: 0.5em;}
-				.promo-text p, .promo-title, .cust_comment, .article h4, .article p{text-align: center !important;}
-				#support .promo-text p {padding: 0.8em 0 0.4em 0 !important;}
+				.promo-text p, .promo-title, .article h4, .article p{text-align: center !important;}
 				.promo .wrap, .promo-home .wrap {padding: 1em;}
 				.promo-title.home {padding: 0.5em;}
 				.promo-text.home p {padding: 1em 1.5em;}
@@ -576,9 +550,7 @@
 				.navbar {padding-right: 0;}
 				.navbar ul {float: none;}
 				.navbar li {display: inline-block;}
-				#dyn_btns_home {margin-top: 0;}
-				#content, #pl_features {width: 98%;}
-				.testimonial {width: 100%;}
+				#content {width: 98%;}
 				#menu_icon {margin-right: 25px;}
 				.centre_img {padding-left: 0;}
 				.promo-text p {
@@ -591,7 +563,6 @@
 				}
 			/*end global*/
 			
-			
 			/*------------>>> HOME <<<------------*/
 			/*------------------------------------*/
 				.container.home div {
@@ -599,8 +570,7 @@
 					width: 100%;
 				}
 				.promo-text {padding-left: 0px;}
-				#dyn_btns_home div {padding-left: 0;}
-				.container, .container.home, #support .container, .testimonial {
+				.container {
 					width: 95%;
 					margin: 0.625em 0;
 					height: auto;
@@ -623,7 +593,7 @@
 			
 			/*---------->>> ABOUT <<<-----------*/
 			/*------------------------------------*/
-				.story p {text-align: center;}
+				#about_text p {text-align: center;}
 			/*end index*/
 			
 		}
@@ -631,15 +601,16 @@
 	
 	/*--------->>> CUSTOM MENU SCROLL <<<----------*/
 	/*---------------------------------------------*/
+	/*For when mobile device is landscape, makes menu scrollable*/
 		@media (max-height: 450px){ 
 			.header_buttons ul {
 				height:100px;
 				padding-bottom: 500px;
 				overflow: scroll;
 			}
-			.header_buttons #home {height: 400px !important;}
+			.header_buttons ul {height: 400px !important;}
 		}
 		@media (max-height: 340px){ 
-			.header_buttons #home {height: 100px !important;}
+			.header_buttons ul {height: 100px !important;}
 		}
 /*end responsive*/
