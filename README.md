@@ -1,2 +1,2 @@
 # CP1406-Assignment-1
-Slammer website
+Responsive (mobile/desktop) Slammer website 
