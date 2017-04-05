@@ -157,13 +157,6 @@
 		border-top: 0.15em solid #DFDFDF;
 		border-bottom: 0.15em solid #DFDFDF;
 	}	
-	.shadow img{
-		-webkit-filter: drop-shadow(0 0.2em 0.4em rgba(0,0,0,.5));
-		-moz-filter: drop-shadow(0 0.2em 0.4em rgba(0,0,0,.5));
-		-ms-filter: drop-shadow(0 0.2em 0.4em rgba(0,0,0,.5));
-		-o-filter: drop-shadow(0 0.2em 0.4em rgba(0,0,0,.5));
-		filter: drop-shadow(0 0.2em 0.4em rgba(0,0,0,.5));
-	}
 	a {
 		color: #26a6d1;
 		cursor: pointer;
@@ -206,11 +199,6 @@
 		margin: 0.3em 0;
 		text-align: center;
 		padding: 0.5em;
-	}
-	.wrap .left_top_part img {
-		-moz-border-radius: 4%;
-		-webkit-border-radius: 4%;
-		border-radius: 4%;
 	}
 	.right_bot_part {
 		height: auto;
