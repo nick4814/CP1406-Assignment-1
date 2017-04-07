@@ -11,7 +11,7 @@
 		4.	ABOUT
 		5.	SIGN UP
 	5.	RESPONSIVE (using @media queries)
-		1.	LARGER SCREENS (queries: >2300px, >1450px, >1000px)
+		1.	LARGER SCREENS (queries: >2300px, >1000px)
 		2.	SHOW NAVBAR (query: >780px)
 		3.	TABLET -> BIG PHONES (query: <780px)
 		4.	SMALL -> BIG PHONES (query: <600px)
@@ -29,6 +29,8 @@
 		-moz-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out; 
 		transition: all 0.3s ease-in-out;
+		
+		font-size: x-large;
 	}
 	html {
 		height: 100%;
@@ -179,9 +181,11 @@
 		line-height: 2.5em;
 		margin: 0 0 0.5em;
 	}
-	h3 {
-		font-size: 1.2em;
-		line-height: 1.5em;
+	h4 {
+		font-size: 1.5em;
+		font-weight: bold;
+		text-align: center;
+		line-height: 1.2em;
 	}
 	img {max-width: 100%;}
 	.img_thin, .img_wide {
@@ -381,13 +385,6 @@
 			margin: 0 auto;
 			border: none;
 		}
-		#text_content h4 {
-			font-size: 1.5em;
-			font-weight: bold;
-			text-align: center;
-			line-height: 1.2em;
-			padding-bottom: 1em;
-		}
 	/*end about*/
 	
 	/*------->>> SIGN UP <<<------*/
@@ -397,8 +394,24 @@
 			width: 50% !important;
 			vertical-align: top;
 		}
-		
-	/*end index*/
+		.ladder_table {
+			width: 90%;
+			margin: 0 auto;
+			font-size: 12px;
+			border: 1px solid #CCC; 
+		} 
+		.ladder_table td {
+			padding: 4px;
+			margin: 3px;
+			border: 1px solid #CCC;
+		}
+		.ladder_table th {
+			background-color: #104E8B; 
+			color: #FFF;
+			font-weight: bold;
+			text-align: center;
+		}
+	/*end sign up*/
 	
 /*end page structure*/
 	
@@ -410,14 +423,12 @@
 	/*----------------------------------------*/
 		@media (min-width: 2300px) { /*For 4k*/
 			body {font-size: x-large;}
-			/*.left_top_part {width: 25% !important;}*/
 			.left_top_part img {
 				height: 100% !important;
 			}
 			.logo {margin-left: 8%;}
 			.logo img {width: 110%;}
 			.navbar {padding-right: 8%;}
-			#support .right_bot_part {padding: 1em 10%;}
 			#logo {top: 3.8em;}
 			#logo img {
 				height: 95%;
@@ -427,23 +438,9 @@
 				top: 4.2em;
 				margin-right: 8%;
 			}
-			.testimonial .feature {
-				width: 80%;
-				padding: 1em 5%;
-				float: none;
-			}
-		}
-		@media (min-width: 1450px){
-			/*----------->>> GLOBAL <<<-----------*/
-			/*------------------------------------*/
-			.left_top_part img {
-				height: 80%;
-				width: auto !important;
-			}
-			/*end global*/
 		}
 		@media (max-width: 1050px){
-			#content, #pl_features {width: 90%;}
+			#content {width: 90%;}
 			.set_height.bigger{margin-top:0}
 			.container {width: 45%;}	
 			.promo .wrap, .promo-home .wrap {max-width: 90%;}
@@ -451,7 +448,6 @@
 			/*------------------------------------*/
 				#text_content {width: 90%;}
 			/*end about*/
-			.testimonial {width: 90%;}
 		}
 	/*end larger screens*/
 	
@@ -582,7 +578,16 @@
 			/*---------->>> ABOUT <<<-----------*/
 			/*------------------------------------*/
 				#text_content p {text-align: center;}
-			/*end index*/
+			/*end about*/
+			
+			/*---------->>> SIGN UP <<<-----------*/
+			/*------------------------------------*/
+				.ladder_table {
+					width: 95%;
+					display: block;
+					overflow-x: auto;
+				} 
+			/*end sign up*/
 			
 		}
 	/*end small -> big phones*/
