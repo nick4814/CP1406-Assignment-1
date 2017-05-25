@@ -1,5 +1,5 @@
 # CP1406-Assignment-1
-Slammer website 
+Slammer website: https://nick4814.github.io/CP1406-Assignment-1/
 
 The site is responsive and therefore changes to fit mobile/4k desktops using @media queries.
 
